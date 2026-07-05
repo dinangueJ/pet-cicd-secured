@@ -16,7 +16,7 @@ env:
   VAULT_SECRET_ID: ${{ secrets.VAULT_SECRET_ID }}
   VAULT_JFROG_PATH: secrets/creds/jfrog
   JFROG_URL: ${{ secrets.JFROG_URL }}
-  JFROG_REPO: 'devops-project'
+  JFROG_REPO: 'pet-clinic-project'
   AWS_REGION: ${{ secrets.AWS_REGION }}
   ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
   AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
@@ -65,7 +65,7 @@ jobs:
           name: app-jar
           path: target/*.jar
           retention-days: 1
-          
+
  test:
     name: Test
     runs-on: ubuntu-latest
